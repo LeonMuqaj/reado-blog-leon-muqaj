@@ -1,0 +1,205 @@
+@import '../variables';
+
+
+.footer {
+  background-color: $black;
+  color: $pure-white;
+  padding: 40px 50px 30px;
+  width: 100%;
+  
+  &__separator {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    
+    &-line {
+      flex: 1;
+      border-bottom: 1px dashed $gray-dark;
+      margin: 0 4px;
+    }
+
+    &-marker {
+      font-size: 14px;
+      color: $gray-medium;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px;
+    gap: 0;
+  }
+
+  &__brand-section {
+    width: 50%;
+    flex-shrink: 0;
+    padding-right: 40px;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 0 24px;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+  }
+
+  &__logo-tm {
+    font-size: 0.8rem;
+    vertical-align: top;
+    position: absolute;
+    top: 4px;
+    right: -16px;
+  }
+
+  &__tagline {
+    font-family: serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  &__subscribe-form {
+    display: flex;
+    gap: 0;
+    margin-bottom: 16px;
+    border: 1px solid $gray-dark;
+    border-radius: 6px;
+    padding: 4px;
+    background-color: $footer-bg-dark;
+    max-width: 450px;
+  }
+
+  &__subscribe-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 12px 16px;
+    color: $pure-white;
+    font-size: 1rem;
+    outline: none;
+
+    &::placeholder {
+      color: $gray-medium;
+    }
+  }
+
+  &__subscribe-btn {
+    background-color: $pure-white;
+    color: $black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__privacy-note {
+    font-size: 0.8rem;
+    color: $gray-medium;
+    line-height: 1.5;
+    
+    a {
+      color: $pure-white;
+      text-decoration: underline;
+    }
+  }
+
+  &__nav-section {
+    display: flex;
+    width: 50%;
+    flex-shrink: 0;
+    justify-content: space-between;
+  }
+
+  &__nav-column-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+  }
+
+  &__nav-column-separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 25px;
+    color: $pure-white;
+    
+    .line {
+      width: 1px;
+      flex: 1;
+      background-color: $pure-white;
+    }
+    
+    .marker {
+      font-size: 10px;
+      line-height: 1;
+      color: $pure-white;
+      
+      &.top { margin-bottom: 6px; }
+      &.bottom { margin-top: 6px; }
+    }
+  }
+
+  &__nav-column {
+    min-width: 120px;
+    flex: 1;
+  }
+
+  &__nav-title {
+    font-family: serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 24px;
+    color: $pure-white;
+  }
+
+  &__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 12px;
+      
+      a {
+        text-decoration: none;
+        color: $text-light;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: color 0.2s;
+
+        &:hover {
+          color: $pure-white;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: $gray-medium;
+  }
+  
+  &__credits-left {
+      strong {
+          color: $text-credits;
+          font-weight: 500;
+      }
+  }
+}

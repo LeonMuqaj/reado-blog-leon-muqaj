@@ -1,0 +1,233 @@
+@import '../../variables';
+@import '../../mixins/tags';
+@import '../../mixins/avatars';
+@import '../../mixins/grids';
+
+.blog-post {
+  min-height: 100vh;
+  background-color: $white; 
+  padding-bottom: 100px;
+  padding-top: 40px;
+
+  &__container {
+    max-width: 1920px; 
+    margin: 0 auto;
+    padding: 0 50px; 
+  }
+
+  &__header {
+    max-width: 950px; 
+    margin: 0 auto 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: $black; 
+    margin-bottom: 32px;
+    font-weight: 500;
+
+    &-separator {
+      color: $gray-800; 
+      font-size: 0.8rem;
+    }
+  }
+
+  &__intro {
+    font-size: 1.25rem; 
+    color: $gray-800; 
+    line-height: 1.6;
+    margin: 0 0 32px; 
+    font-weight: 400;
+    max-width: 800px;
+  }
+
+  &__meta-simple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: $black;
+  }
+
+  &__by {
+    color: $gray-800;
+  }
+
+  &__meta-separator {
+    color: $gray-600; 
+    margin: 0 8px;
+  }
+
+  &__time {
+    color: $gray-800;
+  }
+
+    &__body-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+    gap: 32px; 
+    align-items: start;
+    padding-bottom: 60px;
+    position: relative;
+  }
+
+  &__main-content {
+    min-width: 0; 
+  }
+
+  &__hero {
+    border-radius: 4px; 
+    overflow: hidden;
+    margin-bottom: 40px;
+    background-color: $gray-100;
+    width: 90%; 
+    height: 500px;
+  }
+
+  &__hero-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2; 
+    display: block;
+    object-fit: cover;
+  }
+
+  &__content {
+    max-width: 780px; 
+  }
+
+  &__section-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 40px 0 24px;
+    color: $black; 
+    line-height: 1.2;
+  }
+
+  &__paragraph {
+    font-size: 1.125rem;
+    color: $gray-800; 
+    line-height: 1.8;
+    margin: 0 0 28px;
+    font-family: inherit;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.copy-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background-color: $brand-navy;
+  color: $white;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 4px 20px rgba($black, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999;
+
+  svg {
+    color: $green-400;
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.blog-post {
+  &__navigation {
+    margin-top: 60px;
+    width: 100%;
+    max-width: 780px;
+  }
+
+  &__navigation-separator {
+    width: 100%;
+    height: 1px;
+    background-color: $black;
+    margin-bottom: 30px;
+  }
+
+  &__navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__nav-wrapper {
+    flex: 1;
+    display: flex;
+
+    &--prev {
+      justify-content: flex-start;
+    }
+
+    &--next {
+      justify-content: flex-end;
+    }
+  }
+
+  &__nav-placeholder {
+     display: none;
+  }
+
+  &__nav-link {
+    display: block;
+    text-decoration: none;
+    background-color: #ECECEC;
+    border: 1px solid $black;
+    padding: 10px 15px;
+    min-width: 200px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: darken(#ECECEC, 5%);
+    }
+  }
+
+  &__nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  &__nav-label {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.25rem;
+    color: $black;
+    line-height: 1;
+  }
+
+  &__nav-image {
+    width: 80px;
+    height: 55px;
+    object-fit: cover;
+    border: 1px solid $black;
+  }
+}

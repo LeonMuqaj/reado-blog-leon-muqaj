@@ -1,0 +1,122 @@
+@import '../../mixins/avatars';
+
+@media (max-width: 600px) {
+  .blog-post {
+    padding-bottom: 60px;
+    padding-top: 24px;
+
+    &__container {
+      padding: 0 20px;
+    }
+
+    &__header {
+      margin-bottom: 32px;
+    }
+
+    &__title {
+      font-size: 2.25rem; 
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    &__intro {
+      font-size: 1rem;
+      margin-top: 16px;
+    }
+
+    &__body-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 40px;
+    }
+
+    &__main-content {
+      order: -1 !important;
+    }
+
+    &__sidebar {
+      order: 1 !important;
+      position: static;
+      margin-top: 20px; 
+      padding-top: 40px;
+      border-top: 1px solid #e5e7eb; 
+    }
+
+    &__hero {
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+    }
+
+    &__sidebar-widget {
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+    }
+
+    &__sidebar-title {
+      font-size: 1.5rem;
+    }
+
+    &__section-title {
+       font-size: 1.75rem;
+       margin-top: 32px;
+    }
+
+    &__paragraph {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    &__related {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+
+    &__related-title {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+
+    &__related-list {
+      gap: 32px;
+      
+      .post-card__image-container {
+        height: 240px;
+      }
+    }
+
+    &__navigation {
+      margin-top: 40px;
+    }
+
+    &__navigation-buttons {
+      gap: 16px;
+    }
+
+    &__nav-link {
+      min-width: unset;
+      padding: 6px 10px;
+    }
+
+    &__nav-content {
+      gap: 8px;
+    }
+
+    &__nav-label {
+      font-size: 0.85rem;
+    }
+
+    &__nav-image {
+      width: 50px;
+      height: 35px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .blog-post {
+    &__title {
+      font-size: 1.75rem;
+    }
+  }
+}

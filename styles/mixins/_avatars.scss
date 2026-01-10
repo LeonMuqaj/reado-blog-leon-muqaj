@@ -1,0 +1,11 @@
+@import '../variables';
+
+@mixin avatar($size: 48px, $bg: linear-gradient(135deg, $brand-navy 0%, $blue-accent 100%)) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

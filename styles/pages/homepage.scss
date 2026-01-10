@@ -1,0 +1,52 @@
+@import '../variables';
+
+.homepage {
+  padding: 40px 50px;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: $white;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 48px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 24px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    font-size: 1.25rem;
+    color: $gray-500;
+  }
+
+  &__empty-state {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .homepage {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .homepage {
+    padding: 24px 20px;
+  }
+}
