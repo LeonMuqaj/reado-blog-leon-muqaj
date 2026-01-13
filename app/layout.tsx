@@ -19,9 +19,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tetbit-blog.com"),
+  icons: {
+    icon: [
+      {
+        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M21 4H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zM4 18V6h7v12H4zm16 0h-7V6h7v12z'/></svg>",
+        type: "image/svg+xml",
+      },
+    ],
+  },
   title: {
-    default: "Tetbit Blog - Intern Checklist",
-    template: "%s | Tetbit Blog",
+    default: "Reado Blog",
+    template: "%s | Reado Blog",
   },
   description:
     "Discover insightful articles on technology, tutorials, news, and opinions. Your go-to resource for web development and tech industry insights.",
@@ -36,15 +44,15 @@ export const metadata: Metadata = {
     "TypeScript",
     "React",
   ],
-  authors: [{ name: "Tetbit Team" }],
-  creator: "Tetbit",
-  publisher: "Tetbit",
+  authors: [{ name: "Reado Team" }],
+  creator: "Reado",
+  publisher: "Reado",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Tetbit Blog",
-    title: "Tetbit Blog - Intern Checklist",
+    siteName: "Reado Blog",
+    title: "Reado Blog",
     description:
       "Discover insightful articles on technology, tutorials, news, and opinions. Your go-to resource for web development and tech industry insights.",
     images: [
@@ -52,13 +60,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Tetbit Blog",
+        alt: "Reado Blog",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tetbit Blog - Intern Checklist",
+    title: "Reado Blog",
     description:
       "Discover insightful articles on technology, tutorials, news, and opinions.",
     images: ["/og-image.jpg"],
